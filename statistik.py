@@ -60,7 +60,7 @@ if __name__ == '__main__':
     logger = logging.getLogger('path_creation')
     logger.setLevel(logging.DEBUG if args.verbose else logging.WARNING)
 
-    rfh = RotatingFileHandler('logging/logging.log', maxBytes=10000, backupCount=5, encoding="utf-8")
+    rfh = RotatingFileHandler('logging.log', maxBytes=10000, backupCount=5, encoding="utf-8")
     rfh.setLevel(logger.getEffectiveLevel())
 
     ch = logging.StreamHandler()
